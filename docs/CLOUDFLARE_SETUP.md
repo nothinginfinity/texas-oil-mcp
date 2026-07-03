@@ -68,7 +68,15 @@ The Cloudflare API token should be scoped narrowly for this repo's deployment ne
 
 No R2 S3 access keys are needed for the Worker binding path.
 
-## Deploy
+## Validate and deploy
+
+Before deploy, run:
+
+```bash
+npm run check
+npm run build
+npm run check:wrangler
+```
 
 After `wrangler.toml` has a real D1 database id and GitHub secrets are set, run:
 
