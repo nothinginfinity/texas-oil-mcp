@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rrc-production-data-query-dump",
+    "title": "RRC Production Data Query Dump",
+    "sourceClass": "rrc_bulk_download",
+    "agency": "Railroad Commission of Texas",
+    "landingPage": "https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/",
+    "approvedForAutomation": true,
+    "confidenceClass": "reported_revised"
+  },
+  {
+    "id": "rrc-statewide-production-data",
+    "title": "RRC Statewide Production Data",
+    "sourceClass": "rrc_official_report",
+    "agency": "Railroad Commission of Texas",
+    "landingPage": "https://www.rrc.texas.gov/oil-and-gas/research-and-statistics/production-data/",
+    "approvedForAutomation": true,
+    "confidenceClass": "official_reference"
+  },
+  {
+    "id": "eia-texas-state-monthly",
+    "title": "EIA Texas Monthly State Production",
+    "sourceClass": "eia_api",
+    "agency": "U.S. Energy Information Administration",
+    "landingPage": "https://www.eia.gov/opendata/",
+    "approvedForAutomation": true,
+    "confidenceClass": "eia_estimated"
+  },
+  {
+    "id": "tx-open-data-rrc-wellbore-casing",
+    "title": "Texas Open Data RRC Wellbore Casing",
+    "sourceClass": "texas_open_data_socrata",
+    "agency": "Railroad Commission of Texas / Texas Open Data Portal",
+    "landingPage": "https://data.texas.gov/dataset/RRC-Wellbore-Casing/u9m4-xnh6",
+    "approvedForAutomation": true,
+    "confidenceClass": "official_reference"
+  },
+  {
+    "id": "rrc-interactive-research-queries",
+    "title": "RRC Interactive Research Query Systems",
+    "sourceClass": "disallowed_interactive_query",
+    "agency": "Railroad Commission of Texas",
+    "landingPage": "https://www.rrc.texas.gov/resource-center/research/research-queries/",
+    "approvedForAutomation": false,
+    "confidenceClass": "unknown"
+  }
+]
