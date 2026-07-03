@@ -1,0 +1,29 @@
+name = "texas-oil-mcp"
+main = "src/worker.ts"
+compatibility_date = "2026-07-03"
+workers_dev = true
+
+[observability]
+enabled = true
+head_sampling_rate = 0.1
+
+[vars]
+SOURCE_REGISTRY_VERSION = "0.1.0"
+VECTOR_EMBEDDING_MODEL = "@cf/baai/bge-base-en-v1.5"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "texas-oil-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "RAW_BUCKET"
+bucket_name = "texas-oil-raw"
+
+[[vectorize]]
+binding = "TEXAS_OIL_VECTORIZE"
+index_name = "texas-oil-vectorize"
