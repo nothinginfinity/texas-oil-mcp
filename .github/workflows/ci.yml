@@ -17,3 +17,7 @@ jobs:
       - run: npm install
       - run: npm run check
       - run: npm run build
+      - name: Validate Wrangler config shape
+        run: npm run check:wrangler
+        env:
+          CLOUDFLARE_ACCOUNT_ID: 00000000000000000000000000000000
