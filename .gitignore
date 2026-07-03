@@ -7,6 +7,8 @@ dist/
 coverage/
 .cache/
 .tmp/
+.wrangler-dry-run/
+.wrangler/
 data/raw/
 data/processed/
 *.sqlite
