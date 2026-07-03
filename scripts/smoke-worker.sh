@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE_URL="${BASE_URL:-https://texas-oil-mcp.YOUR_WORKERS_SUBDOMAIN.workers.dev}"
+if [ -z "${BASE_URL:-}" ]; then
+  echo "Set BASE_URL before running smoke-worker.sh"
+  exit 1
+fi
 
 curl -sS "$BASE_URL/health"
 curl -sS "$BASE_URL/api/sources"
