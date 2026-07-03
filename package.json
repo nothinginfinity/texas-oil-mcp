@@ -1,0 +1,40 @@
+{
+  "name": "texas-oil-mcp",
+  "version": "0.1.0",
+  "description": "Compliant MCP server and data pipeline for Texas oil and gas data.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "texas-oil-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "texas",
+    "oil",
+    "gas",
+    "rrc",
+    "eia",
+    "socrata",
+    "cloudflare"
+  ],
+  "author": "nothinginfinity",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
