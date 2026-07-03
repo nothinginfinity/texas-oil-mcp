@@ -88,10 +88,10 @@ Or trigger the GitHub Actions workflow named `Deploy Cloudflare Worker` manually
 
 ## Smoke test
 
-Set the deployed Worker URL and admin token locally:
+Set the deployed Worker URL and admin value locally:
 
 ```bash
-BASE_URL="https://texas-oil-mcp.YOUR_WORKERS_SUBDOMAIN.workers.dev" ADMIN_TOKEN="your-token" npm run smoke:worker
+BASE_URL="https://texas-oil-mcp.YOUR_WORKERS_SUBDOMAIN.workers.dev" AUTH_VALUE="your-admin-value" npm run smoke:worker
 ```
 
 ## Current Worker endpoints
