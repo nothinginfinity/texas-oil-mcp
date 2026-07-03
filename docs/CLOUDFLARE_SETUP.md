@@ -13,7 +13,7 @@ The Worker expects these bindings:
 | `TEXAS_OIL_VECTORIZE` | Vectorize | embeddings for docs, summaries, schema notes, and RAG context |
 | `AI` | Workers AI | embedding generation for Vectorize |
 
-Vectorize is Cloudflare's vector database for semantic search/RAG-style retrieval, and its Worker binding is configured in Wrangler as a `[[vectorize]]` binding. The index dimensions and distance metric are fixed when the index is created, so this repo uses a 768-dimension cosine index for the configured BGE embedding model.
+Vectorize is used for semantic retrieval and RAG-style context. The index dimensions and distance metric are fixed when the index is created, so this repo uses a 768-dimension cosine index for the configured BGE embedding model.
 
 ## Manual Cloudflare bootstrap
 
@@ -45,7 +45,7 @@ npm run cf:secrets
 
 Required Worker secret:
 
-- `ADMIN_TOKEN` — choose a long random value for protected admin/upload/vector upsert endpoints.
+- `ADMIN_TOKEN` — choose a long random value for protected admin, upload, and vector upsert endpoints.
 
 Optional Worker secret:
 
@@ -88,13 +88,13 @@ Or trigger the GitHub Actions workflow named `Deploy Cloudflare Worker` manually
 
 ## Smoke test
 
-Run the smoke script with the deployed Worker URL as the only argument:
+Run the public smoke script with the deployed Worker URL as the only argument:
 
 ```bash
 bash scripts/smoke-worker.sh https://texas-oil-mcp.YOUR_WORKERS_SUBDOMAIN.workers.dev
 ```
 
-To seed source records after deployment, send a protected request to `POST /api/admin/seed-sources` with the configured bearer value.
+To seed source records after deployment, call `POST /api/admin/seed-sources` with the configured admin bearer value.
 
 ## Current Worker endpoints
 
@@ -110,11 +110,7 @@ To seed source records after deployment, send a protected request to `POST /api/
 
 ### Admin protected
 
-These require:
-
-```text
-Authorization: Bearer <ADMIN_TOKEN>
-```
+These use a bearer value matching `ADMIN_TOKEN`:
 
 - `POST /api/admin/seed-sources`
 - `PUT /api/raw/<key>`
