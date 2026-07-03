@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ -z "${BASE_URL:-}" ]; then
-  echo "Set BASE_URL before running smoke-worker.sh"
+if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
-curl -sS "$BASE_URL/health"
-curl -sS "$BASE_URL/api/sources"
+curl -sS "$1/health"
+curl -sS "$1/api/sources"
