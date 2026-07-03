@@ -1,6 +1,6 @@
 {
   "name": "texas-oil-mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Compliant MCP server and Cloudflare data pipeline for Texas oil and gas data.",
   "type": "module",
   "main": "dist/index.js",
@@ -36,7 +36,7 @@
   "author": "nothinginfinity",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "latest",
